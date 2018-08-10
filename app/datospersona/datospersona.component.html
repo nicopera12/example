@@ -1,0 +1,38 @@
+<RadSideDrawer #drawer showOverNavigation="true" [drawerTransition]="sideDrawerTransition" drawerLocation="right">
+    <StackLayout tkDrawerContent>
+        <HdiDrawer [selectedPage]="'Home'"></HdiDrawer>
+    </StackLayout>
+
+    <GridLayout rows="auto,auto,*" columns="*" class="Page" tkMainContent>
+        <HdiActionbar></HdiActionbar>
+        <HdiTitulo icono="{{icoInsp}}" titulo="Nueva Inspección" descripcion="Datos del responsable de la inspección"></HdiTitulo>
+        <ScrollView row="2" col="0" orientation="vertical" class="Bcw">
+            <StackLayout paddingTop="{{layout.form.paddT}}" width="80%">
+                <StackLayout paddingBottom="{{layout.form.inputPdB}}">
+                    <Label text="NOMBRE" paddingBottom="0" fontSize="{{layout.form.label}}"></Label>
+                    <TextField [(ngModel)]="textFieldValue" fontSize="{{layout.form.t1}}" class="inpText"></TextField>
+                </StackLayout>
+                <StackLayout paddingBottom="{{layout.form.inputPdB}}">
+                    <Label text="TELÉFONO" paddingBottom="0" fontSize="{{layout.form.label}}"></Label>
+                    <TextField [(ngModel)]="textFieldValue2" fontSize="{{layout.form.t1}}" class="inpText"></TextField>
+                </StackLayout>
+                <StackLayout paddingBottom="{{layout.form.inputPdB}}">
+                    <Label text="EMAIL" paddingBottom="0" fontSize="{{layout.form.label}}"></Label>
+                    <TextField [(ngModel)]="textFieldValue3" fontSize="{{layout.form.t1}}" class="inpText"></TextField>
+                </StackLayout>
+                <StackLayout paddingBottom="{{layout.form.inputPdB}}">
+                    <Label text="TÉRMINOS Y CONDICIONES" paddingBottom="0" fontSize="{{layout.form.label}}"></Label>
+                    <GridLayout columns="auto,*,auto" rows="auto" paddingTop="{{layout.form.inputPdT}}">
+                        <Switch row="0" col="0" (checkedChange)="onFirstChecked($event)"></Switch>
+                        <Label row="0" col="1" text="{{firstSwitchState}}" fontSize="{{layout.form.t2}}" verticalAlignment="middle"></Label>
+                        <Label row="0" col="2" text="{{icoEye}}" fontSize="{{layout.form.ico1}}" verticalAlignment="middle" class="icon Tcb"></Label>
+                    </GridLayout>
+                </StackLayout>
+                <Button row="2" col="0" text="CONTINUAR" width="100%" marginTop="{{layout.form.inputPdT}}" class="Bc2 Tcw" [nsRouterLink]="['/datosauto']" pageTransition="{{transition}}"></Button>
+                <StackLayout paddingTop="{{layout.form.inputPdT}}" paddingBottom="{{layout.footer.paddB}}">
+                    <Label text="{{icoSSN}}" class="icon Tcb" textAlignment="center" fontSize="{{layout.footer.ssn}}"></Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </GridLayout>
+</RadSideDrawer>

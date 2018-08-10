@@ -1,0 +1,25 @@
+<GridLayout rows="auto, *" class="sidedrawer sidedrawer-left">
+    <StackLayout row="0" class="sidedrawer-header">
+        <Label class="sidedrawer-header-image fa" text="&#xf2bd;"></Label>
+        <Label class="sidedrawer-header-brand" text="User Name"></Label>
+        <Label class="footnote" text="username@mail.com"></Label>
+    </StackLayout>
+
+    <ScrollView row="1">
+        <StackLayout class="sidedrawer-content">
+            <HdiDrawerItem title="Home" route="/home" [isSelected]="isPageSelected('Home')">
+            </HdiDrawerItem>
+            <HdiDrawerItem title="Browse" route="/browse" [isSelected]="isPageSelected('Browse')">
+            </HdiDrawerItem>
+            <HdiDrawerItem title="Search" route="/search" [isSelected]="isPageSelected('Search')">
+            </HdiDrawerItem>
+            <HdiDrawerItem title="Featured" route="/featured" [isSelected]="isPageSelected('Featured')">
+            </HdiDrawerItem>
+
+            <StackLayout class="hr-light"></StackLayout>
+
+            <HdiDrawerItem title="Settings" route="/settings" [isSelected]="isPageSelected('Settings')">
+            </HdiDrawerItem>
+        </StackLayout>
+    </ScrollView>
+</GridLayout>

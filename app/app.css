@@ -1,0 +1,63 @@
+.TextViewWhite {
+    border-width: 2;
+    border-color: white;
+}
+
+.Tupper {
+    text-transform: uppercase;
+}
+
+.Tcb {
+    color: black;
+}
+
+.Tcw {
+    color: white;
+}
+
+.Tc1 {
+    color: #007e29;
+}
+
+.Tc2 {
+    color: #009c33;
+}
+
+.Tac {
+    text-align: center;
+}
+
+.Tb {
+    font-weight: bold;
+}
+
+.Bcw {
+    background-color: white;
+}
+
+.Bc1 {
+    background-color: #007e29;
+}
+
+.Bc2,
+Page {
+    background-color: #009c33;
+}
+
+.buttT2 {
+    border-width: 1 1 1 1;
+    border-color: #009c33 #009c33 #009c33 #009c33;
+    background-color: transparent;
+}
+
+.Uline1 {
+    border-width: 1 1 2 1;
+    border-color: #fff #fff #d2d3d4 #fff;
+}
+
+.icon {
+    font-family: 'icomoon';
+}
+
+@import 'fonts/icomoon.css';
+@import '~nativescript-theme-core/css/core.light.css';

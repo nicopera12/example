@@ -1,0 +1,26 @@
+<RadSideDrawer #drawer showOverNavigation="true" [drawerTransition]="sideDrawerTransition" drawerLocation="right">
+    <StackLayout tkDrawerContent>
+        <HdiDrawer [selectedPage]="'Home'"></HdiDrawer>
+    </StackLayout>
+
+    <GridLayout rows="auto,auto,*" columns="*" class="Page" tkMainContent>
+        <HdiActionbar></HdiActionbar>
+        <HdiTitulo icono="{{icoCar}}" titulo="Nueva Inspección" descripcion="Datos del responsable de la inspección"></HdiTitulo>
+        <ScrollView row="2" col="0" orientation="vertical" class="Bcw">
+            <StackLayout paddingTop="{{layout.form.paddT}}" width="80%">
+                <StackLayout paddingBottom="{{layout.form.inputPdB}}">
+                    <Label text="PATENTE DEL VEHÍCULO" paddingBottom="0" fontSize="{{layout.form.label}}"></Label>
+                    <TextField [(ngModel)]="textFieldValue" fontSize="{{layout.form.t1}}" class="inpText"></TextField>
+                </StackLayout>
+                <StackLayout paddingBottom="{{layout.form.inputPdB}}">
+                    <Label text="AÑO DEL VEHÍCULO" paddingBottom="0" fontSize="{{layout.form.label}}"></Label>
+                    <TextField [(ngModel)]="textFieldValue2" fontSize="{{layout.form.t1}}" class="inpText"></TextField>
+                </StackLayout>
+                <Button row="2" col="0" text="CONTINUAR" width="100%" marginTop="{{layout.form.inputPdT}}" class="Bc2 Tcw" [nsRouterLink]="['/wizard/1']" pageTransition="{{transition}}"></Button>
+                <StackLayout paddingTop="{{layout.form.inputPdT}}" paddingBottom="{{layout.footer.paddB}}">
+                    <Label text="{{icoSSN}}" class="icon Tcb" textAlignment="center" fontSize="{{layout.footer.ssn}}"></Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </GridLayout>
+</RadSideDrawer>

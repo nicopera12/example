@@ -1,0 +1,34 @@
+<RadSideDrawer #drawer showOverNavigation="true" [drawerTransition]="sideDrawerTransition" drawerLocation="right">
+    <StackLayout tkDrawerContent>
+        <HdiDrawer [selectedPage]="'Home'"></HdiDrawer>
+    </StackLayout>
+    <StackLayout orientation="vertical" tkMainContent>
+        <GridLayout rows="*,auto,*" columns="*,*">
+            <StackLayout row="0" col="0" colSpan="2" height="100%" color="white" verticalAlignment="bottom">
+                <Label text="{{icoHdi}}" class="icon" marginBottom="{{layout.titPrinc.sep}}" fontSize="{{layout.titPrinc.logo}}" textAlignment="center"></Label>
+                <Label text="Sistema de gestión" fontWeight="Bold" fontSize="{{layout.titPrinc.t1}}" textAlignment="center"></Label>
+                <Label text="de inspecciones" fontWeight="Bold" fontSize="{{layout.titPrinc.t1}}" textAlignment="center"></Label>
+            </StackLayout>
+            <StackLayout row="1" col="0" width="{{layout.buttLogin.h}}" height="{{layout.buttLogin.h}}" horizontalAlignment="right" marginRight="{{layout.buttLogin.m}}" backgroundColor="white" marginTop="{{layout.buttLogin.paddT}}">
+                <Button width="100%" height="100%" textAlignment="center" class="buttLogin" textWrap="true" [nsRouterLink]="['/datospersona']" pageTransition="{{transition}}">
+                        <Span text="{{icoPhoto}}&#x000a;" fontSize="{{layout.buttLogin.icon1}}" class="Tc1 icon"></Span>
+                        <Span text="Nueva&#x000a;" fontWeight="Bold" fontSize="{{layout.buttLogin.t1}}" class="Tc1"></Span>
+                        <Span text="inspección&#x000a;" fontSize="{{layout.buttLogin.t2}}" class="Tc1"></Span>
+                        <Span text="{{angleDown}}" fontSize="{{layout.buttLogin.icon2}}" class="Tc2 icon"></Span>
+                    </Button>
+            </StackLayout>
+            <StackLayout row="1" col="1" width="{{layout.buttLogin.h}}" height="{{layout.buttLogin.h}}" horizontalAlignment="left" marginLeft="{{layout.buttLogin.m}}" backgroundColor="white" marginTop="{{layout.buttLogin.paddT}}">
+                <Button width="100%" height="100%" textAlignment="center" class="buttLogin" textWrap="true">
+                        <Span text="{{icoCheck}}&#x000a;" fontSize="{{layout.buttLogin.icon1}}" class="Tc1 icon"></Span>
+                        <Span text="&#x000a;" fontSize="{{layout.buttLogin.sep}}"></Span>
+                        <Span text="Verificar&#x000a;" fontWeight="Bold" fontSize="{{layout.buttLogin.t1}}" class="Tc1"></Span>
+                        <Span text="inspecciones&#x000a;" fontSize="{{layout.buttLogin.t2}}" class="Tc1"></Span>
+                        <Span text="{{angleDown}}" fontSize="{{layout.buttLogin.icon2}}" class="Tc2 icon"></Span>
+                    </Button>
+            </StackLayout>
+            <StackLayout row="2" col="0" colSpan="2" color="white" verticalAlignment="bottom" marginBottom="{{layout.footer.paddB}}">
+                <Label text="{{icoSSN}}" class="icon" textAlignment="center" fontSize="{{layout.footer.ssn}}"></Label>
+            </StackLayout>
+        </GridLayout>
+    </StackLayout>
+</RadSideDrawer>
